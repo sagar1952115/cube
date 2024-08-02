@@ -1,0 +1,20 @@
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    place-content: center; 
+  }
+  
+  .photo-item {
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 3 / 2; 
+    object-fit:cover;
+    border-radius: 8px;
+  }
+
+  .photo-container {
+    display: flex;
+    justify-content: center;
+    
+  }
