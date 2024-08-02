@@ -6,7 +6,12 @@ import "./PhotoGrid.css";
 const PEXELS_API_KEY =
   "SjVb7EK79yMkFwWFmqM64d8pz7oJBmwfdUgkbNrz11k7PthrqNosmgGK";
 
-const PhotoGrid: React.FC = ({ content }) => {
+  interface PhotoGridProps {
+    content: { name: string; title: string; id: number } | null; // Update with the appropriate type if necessary
+  }
+
+
+const PhotoGrid: React.FC<PhotoGridProps> = ({ content }) => {
   const [photos, setPhotos] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 

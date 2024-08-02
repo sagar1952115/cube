@@ -3,23 +3,25 @@ import './Sidebar.css';
 import Card from '../card/Card';
 
 interface Item {
+  id:number;
   name: string;
   title: string;
-  content:object;
 }
 
 interface SidebarProps {
   data: Item[];
-  content:null;
+  content: Item | null;
+  setContent: React.Dispatch<React.SetStateAction<Item | null>>;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ data,content,setContent }) => {
   const [items, setItems] = useState<Item[]>([]);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const [isScrolling, setIsScrolling] = useState(false);
-  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  // const scrollTimeoutRef = useRef<Node | null>(null);
+  const scrollTimeoutRef = useRef<number | null>(null);
 
-  const handleClick=(data)=>{
+  const handleClick=(data:Item)=>{
     setContent(data)
   }
   
@@ -45,6 +47,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data,content,setContent }) => {
 
     if (scrollTimeoutRef.current) {
       clearTimeout(scrollTimeoutRef.current);
+      scrollTimeoutRef.current = null;
     }
 
     scrollTimeoutRef.current = setTimeout(() => {
@@ -59,7 +62,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data,content,setContent }) => {
       onScroll={handleScroll}
     >
       {items.map((item, index) => (
-        <Card handleClick={handleClick} content={content} id={index} key={index} name={item.name} title={item.title} />
+        <Card handleClick={handleClick} content={content} id={item.id} key={index} name={item.name} title={item.title} />
       ))}
     </div>
   );

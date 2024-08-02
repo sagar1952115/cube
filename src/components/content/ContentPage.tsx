@@ -1,13 +1,13 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import axios from 'axios';
-import SkeletonLoader from '../skeleton-loader/SkeletonLoader';
+import React from 'react';
 import PhotoGrid from '../photo-grid/PhotoGrid';
 import './ContentPage.css'; 
 import EmptyContentPage from "./EmptyContentPage"
 
-const PEXELS_API_KEY = 'SjVb7EK79yMkFwWFmqM64d8pz7oJBmwfdUgkbNrz11k7PthrqNosmgGK'; // Replace with your Pexels API key
+interface ContentPageProps {
+  content: { name: string; title: string; id: number } | null; // Update with the appropriate type if necessary
+}
 
-const ContentPage: React.FC = ({content}) => {
+const ContentPage: React.FC<ContentPageProps> = ({content}) => {
   if(!content){
     return <EmptyContentPage/>;
   }
