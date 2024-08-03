@@ -33,7 +33,7 @@ npm install
 
 - **React**: JavaScript library for building user interfaces.
 - **TypeScript**: Typed superset of JavaScript that compiles to plain JavaScript.
-- **CSS**: Styling the application with modern CSS and SCSS.
+- **CSS**: Styling the application with CSS.
 
 ## Deployed Link
 
