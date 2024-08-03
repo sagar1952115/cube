@@ -6,6 +6,7 @@ interface Item {
   id:number;
   name: string;
   title: string;
+  address:string;
 }
 
 interface SidebarProps {
@@ -62,7 +63,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data,content,setContent }) => {
       onScroll={handleScroll}
     >
       {items.map((item, index) => (
-        <Card handleClick={handleClick} content={content} id={item.id} key={index} name={item.name} title={item.title} />
+        <Card handleClick={handleClick} content={content} item={item} key={index} />
       ))}
     </div>
   );
