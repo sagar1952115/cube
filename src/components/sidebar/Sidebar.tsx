@@ -19,7 +19,6 @@ const Sidebar: React.FC<SidebarProps> = ({ data,content,setContent }) => {
   const [items, setItems] = useState<Item[]>([]);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const [isScrolling, setIsScrolling] = useState(false);
-  // const scrollTimeoutRef = useRef<Node | null>(null);
   const scrollTimeoutRef = useRef<number | null>(null);
 
   const handleClick=(data:Item)=>{

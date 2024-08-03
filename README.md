@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
+# Cube React Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Cube React Assignment** repository! This application is a single-page application (SPA) developed using React and TypeScript. It serves as a customer details portal.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Deployed Link](#deployed-link)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To get started with the project, clone the repository and install the necessary dependencies.
 
-- Configure the top-level `parserOptions` property like this:
+```bash
+git clone https://github.com/sagar1952115/cube.git
+cd cube
+npm install
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Features
+
+- **Customer Details Portal**: View and manage customer information, including names, titles, and addresses.
+- **Infinite Scrolling Sidebar**: The sidebar initially loads 25 data items and dynamically loads another 25 items whenever the user reaches the bottom, efficiently handling 1000 items.
+- **Skeleton-Loading**: Added skeleton loading from smooth UX.
+- **User-Friendly Interface**: Easy navigation and intuitive user experience.
+
+
+## Technologies Used
+
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Typed superset of JavaScript that compiles to plain JavaScript.
+- **CSS**: Styling the application with modern CSS and SCSS.
+
+## Deployed Link
+
+[cube-react-assignment.netlify.app](cube-react-assignment.netlify.app)
+
